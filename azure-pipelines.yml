@@ -24,18 +24,8 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'docker-registry'
-        command: 'login'
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'docker-registry'
         repository: '0rtem'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
-          0rtem:latest
-          
-
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'docker-registry'
-        command: 'logout'
+          '0rtem:latest'
