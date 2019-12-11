@@ -32,7 +32,7 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
-          $(repoName):latest
+          0rtem:latest
           
 
     - task: Docker@2
