@@ -28,4 +28,5 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
-          '0rtem:latest'
+          0rtem
+          latest
