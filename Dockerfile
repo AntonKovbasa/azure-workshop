@@ -6,7 +6,7 @@ COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 
 #COPY src file to workdir
-COPY C:\Users\Anton.Kovbasa\IdeaProjects\workshop-app\src /home/gradle/src
+COPY ./src /home/gradle/src
 
 RUN gradle build --no-daemon
 
@@ -16,6 +16,6 @@ EXPOSE 8080
 
 RUN mkdir /app
 
-COPY --from=build C:\Users\Anton.Kovbasa\IdeaProjects\workshop-app\build\libs\*.jar /app/workshop-app-0.0.1.jar
+COPY --from=build /home/gradle/src/build/libs/*.jar /app/workshop-app-0.0.1.jar
 
 ENTRYPOINT ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap","-jar","/app/workshop-app-0.0.1.jar"]
