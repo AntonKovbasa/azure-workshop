@@ -29,5 +29,5 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-          0rtem
+          0rtem1
           latest
