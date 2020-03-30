@@ -22,7 +22,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'docker-registry'
+        containerRegistry: 'docker-hub'
         repository: 'antonkovbasa/workshopapp'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
